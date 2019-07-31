@@ -1,12 +1,12 @@
 <template>
   <b-modal
-    id="baseModal"
     ref="modal"
-    :title="title"
+    :id="name"
     @hidden="handleHide"
     @ok="handleOk"
   >
-    <template slot="modal-title">{{ title }}</template>
+    <template v-if="!title" slot="modal-header">&nbsp;</template>
+    <template v-if="title" slot="modal-title">{{ title }}</template>
 
     <slot></slot>
   </b-modal>
@@ -20,7 +20,11 @@
     props: {
       title: {
         type: String,
-        required: true
+        default: null,
+      },
+      name: {
+        type: String,
+        required: true,
       }
     },
     methods: {

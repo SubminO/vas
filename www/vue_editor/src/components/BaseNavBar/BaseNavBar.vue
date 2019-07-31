@@ -15,9 +15,9 @@
       <b-nav-item-dropdown text="Chapters">
         <b-dropdown-item
           v-for="ep in routesList"
-          :disabled="ep.path === $root.cr"
-          :href="ep.path"
+          :to="ep"
           v-bind:key="ep.path"
+          :disabled="ep.path === $route.path"
         >
           {{ ep.meta.title }}
         </b-dropdown-item>

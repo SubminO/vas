@@ -1,16 +1,18 @@
 <template>
-  <b-container fluid>
-    <v-nav-bar/>
-    <slot></slot>
-  </b-container>
+  <div id="app">
+    <b-container fluid>
+      <nav-bar/>
+      <router-view/>
+    </b-container>
+  </div>
 </template>
 
 <script>
-  import VNavBar from '../components/BaseNavBar/BaseNavBar'
+  import NavBar from '../components/BaseNavBar/BaseNavBar'
 
   export default {
     components: {
-      VNavBar
+      NavBar
     },
   }
 </script>

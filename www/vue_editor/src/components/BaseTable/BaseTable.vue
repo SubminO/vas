@@ -52,7 +52,7 @@
 
   import 'vue-awesome/icons/plus';
   import VIcon from 'vue-awesome/components/Icon'
-  import DeleteBtn from '../BaseDeleteBtn/BaseDeleteBtn';
+  import DeleteBtn from '../BaseDeleteButton/BaseDeleteButton';
 
   export default {
     name: 'ItemsTable',
@@ -73,14 +73,9 @@
         type: String,
         required: true
       },
-    },
-    created: async () => {
-      eventBus.$on('system-busy', function () { this.isBusy = true });
-      eventBus.$on('system-unbusy', function () { this.isBusy = false });
-    },
-    data () {
-      return {
-        isBusy: false,
+      isBusy: {
+        type: Boolean,
+        required: true,
       }
     },
     methods: {

@@ -1,5 +1,5 @@
 import buildUrl from 'build-url';
-import { API_URL, API_HEADERS } from '../constants';
+import { API_URL, API_HEADERS } from './constants';
 
 function _buildUrl(path, query =null) {
   let params = {path: path};

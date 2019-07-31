@@ -1,29 +1,35 @@
 <template>
-  <main-layout>
+  <div id="routes">
     <items-table
       title="Route list"
       :items="items"
       :fields="fields"
+      :isBusy="isBusy"
     />
-    <modal :title="modalTitle">
+    <modal name="formModal" :title="modalTitle">
       <editor-form :current-route="current"/>
     </modal>
-  </main-layout>
+    <modal name="deleteConfirmModal">
+      <h6>Do you really want to delete the route '{{ current.name }}'?</h6>
+    </modal>
+  </div>
 </template>
 
 <script>
-  import { EMPTY_ROUTE } from '../../constants';
+  import {
+    EMPTY_ROUTE,
+    RETRIEVE_INTERVAL
+  } from '../../constants';
+
   import { eventBus } from '../../eventBus';
 
-  import MainLayout from '../../layouts/Main';
-  import ItemsTable from '../BaseTable/BaseTable';
+  import ItemsTable from '../../components/BaseTable/BaseTable';
   import EditorForm from '../RouteEditorForm/RouteEditorForm';
-  import Modal from '../BaseModal/BaseModal';
+  import Modal from '../../components/BaseModal/BaseModal';
 
   export default {
     name: 'RouteEditor',
     components: {
-      MainLayout,
       ItemsTable,
       Modal,
       EditorForm,
@@ -31,6 +37,7 @@
     data() {
       return {
         handler: null,
+        isBusy: false,
         current: {},
         items: [],
         fields: [
@@ -46,29 +53,40 @@
       const that = this;
 
       eventBus.$on('item-select', function (item) {
-        Object.assign(that.current, item);
+        that.current = item;
         that.handler = that.updateRoute;
-        that.showModal();
+        that.showModal('formModal');
       });
       eventBus.$on('item-create', function () {
-        Object.assign(that.current, EMPTY_ROUTE);
+        that.current = EMPTY_ROUTE;
         that.handler = that.createRoute;
-        that.showModal();
+        that.showModal('formModal');
       });
       eventBus.$on('item-delete', async function(item) {
-        Object.assign(that.current, item);
-        await that.deleteRoute();
+        that.current = item;
+        that.handler = that.deleteRoute;
+        that.showModal('deleteConfirmModal');
       });
       eventBus.$on('modal-ok', async function() {
         await that.handler();
-        Object.assign(that.current, EMPTY_ROUTE);
+        that.current = EMPTY_ROUTE;
       });
       eventBus.$on('modal-hidden', async function() {
-        Object.assign(that.current, EMPTY_ROUTE);
+        that.current = EMPTY_ROUTE;
       });
+      eventBus.$on('system-busy', function () {
+        that.isBusy = true
+      });
+      eventBus.$on('system-idle', function () {
+        that.isBusy = false
+      });
+    },
+    async mounted () {
+      // await this.retrieveRoutes();
 
-      // Eventlisteners  настроены, можно получить внешние даггые
-      await that.retrieveRoutes();
+      this.interval = setInterval(function () {
+        this.retrieveRoutes();
+      }.bind(this), RETRIEVE_INTERVAL);
     },
     computed: {
       modalTitle () {
@@ -82,55 +100,60 @@
       }
     },
     methods: {
-      showModal () {
-        this.$bvModal.show('baseModal');
+      showModal (modal) {
+        this.$bvModal.show(modal);
       },
       async retrieveRoutes ()  {
+        if ( this.isBusy === true ) return;
+
         try {
-          eventBus.$emit('system-busy');
-          this.items = await this.$root.api.retrieve('/api/routes/');
+          this.items = await this.$api.retrieve('/api/routes/');
         } catch (e) {
           // todo log error
           console.warn(e);
-        } finally {
-          eventBus.$emit('system-unbusy');
         }
       },
       async deleteRoute () {
+        if ( this.isBusy === true ) return;
+        eventBus.$emit('system-busy');
+
         try {
-          eventBus.$emit('system-busy');
-          await this.$root.api.delete(`/api/routes/${this.current.id}/`);
-          this.items = await this.$root.api.retrieve('/api/routes/');
+          await this.$api.delete(`/api/routes/${this.current.id}/`);
+          this.items = await this.$api.retrieve('/api/routes/');
         } catch (e) {
           // todo log error
           console.warn(e);
-        } finally {
-          eventBus.$emit('system-unbusy');
         }
+
+        eventBus.$emit('system-idle');
       },
       async createRoute () {
+        if ( this.isBusy === true ) return;
+        eventBus.$emit('system-busy');
+
         try {
-          eventBus.$emit('system-busy');
-          await this.$root.api.create('/api/routes/', null, this.current);
-          this.items = await this.$root.api.retrieve('/api/routes/');
+          await this.$api.create('/api/routes/', null, this.current);
+          this.items = await this.$api.retrieve('/api/routes/');
         } catch (e) {
           // todo log error
           console.warn(e);
-        } finally {
-          eventBus.$emit('system-unbusy');
         }
+
+        eventBus.$emit('system-idle');
       },
       async updateRoute () {
+        if ( this.isBusy === true ) return;
+        eventBus.$emit('system-busy');
+
         try {
-          eventBus.$emit('system-busy');
-          await this.$root.api.update(`/api/routes/${this.current.id}/`, null, this.current);
-          this.items = await this.$root.api.retrieve('/api/routes/');
+          await this.$api.update(`/api/routes/${this.current.id}/`, null, this.current);
+          this.items = await this.$api.retrieve('/api/routes/');
         } catch (e) {
           // todo log error
           console.warn(e);
-        } finally {
-          eventBus.$emit('system-unbusy');
         }
+
+        eventBus.$emit('system-idle');
       }
 
     }
