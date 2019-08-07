@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Панель администратора: {% block title %}OTSM GPS{% endblock %}</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'pa/vendors/iconfonts/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pa/vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'pa/css/style.css' %}">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{% static 'pa/images/favicon.png' %}"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
+    <style>
+        .leaflet-grab {
+            cursor: auto;
+        }
+
+        .leaflet-dragging .leaflet-grab {
+            cursor: move;
+        }
+
+
+    </style>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+{#{% include 'admin_panel/_modal.html' %}#}
+<div class="container-scroller">
+    {% include 'admin_panel/_navbar.html' %}
+    <div class="container-fluid page-body-wrapper">
+        {% include 'admin_panel/_sidebar.html' %}
+        <div class="main-panel">
+            <div class="content-wrapper p-0 p-sm-5">
+                <div class="card p-2 p-sm-3">
+                    <div class="card-body p-1 p-sm-4">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            {% include 'admin_panel/_footer.html' %}
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="{% static 'pa/vendors/js/vendor.bundle.base.js' %}"></script>
+<script src="{% static 'pa/vendors/js/vendor.bundle.addons.js' %}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="{% static 'pa/js/off-canvas.js' %}"></script>
+<script src="{% static 'pa/js/misc.js' %}"></script>
+
+{% include 'admin_panel/js/ajax_add.html'|safe %}
+{#{% include 'admin_panel/js/ajax_edit.html'|safe %}#}
+{% include 'admin_panel/js/ajax_relation.html'|safe %}
+{% block scripts %}{% endblock %}
+<!-- endinject -->
+<!-- Custom js for this page-->
+<!-- End custom js for this page-->
+</body>
+
+</html>

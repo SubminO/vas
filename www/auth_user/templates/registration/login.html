@@ -1,0 +1,31 @@
+{% extends "base_auth.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Вход в панель ДК Балаково{% endblock %}
+
+{% block toggle_login %}{% endblock %}
+
+{% block heading %}
+    <h2>Вход в панель администратора ДК Балаково</h2>
+{% endblock %}
+
+{% block content %}
+    {#    <div class="sufee-login d-flex align-content-center flex-wrap">#}
+    <div>
+        <div class="container">
+            <div class="login-content">
+                <div class="login-form">
+                    <form action="{% url "login" %}" method="post" accept-charset="utf-8">
+                        {{ form|crispy }}
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ next }}">
+                        <input class="btn btn-success w-100" type="submit" value="Войти">
+                        <div class="register-link m-t-15 text-center">
+                            <p>Не зарегистированы? <a href="{% url 'signup' %}"> Регистрация</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

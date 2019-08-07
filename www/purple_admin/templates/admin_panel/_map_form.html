@@ -1,0 +1,39 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<hr>
+<div class="btn btn-outline-primary ajax_flat w-100">Добавить квартиру</div>
+<div class="row">
+    {% for type in form.instance.list_of_objects_type %}
+
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5>{{ type.type.name }}</h5>
+                    {% for flat in type.flats %}
+                        <span class="delete">
+                        <b>{{ flat.name }}: </b>{{ flat.description }}
+                        <span class="text-danger ajax_flat_delete" pk="{{ flat.pk }}"><i
+                                class="mdi mdi mdi-delete-forever"></i></span>
+                        </span><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+<form action="{{ request.path }}" method="post" class="my-4">
+    <div class="d-flex w-100">
+        <input type="submit" value="Сохранить" class="btn btn-success flex-fill m-2">
+        <div class="btn btn-secondary m-2" onclick="$('.ajax-body').hide(250);">Отмена</div>
+    </div>
+    {% csrf_token %}
+    <input type="hidden" name="flats">
+    {{ form|crispy }}
+    <div id="mapid" class="w-100 h-100 mb-4" style="min-height: 250px"></div>
+    <div class="d-flex w-100">
+        <input type="submit" value="Сохранить" class="btn btn-success flex-fill m-2">
+        <div class="btn btn-secondary m-2" onclick="$('.ajax-body').hide(250);">Отмена</div>
+    </div>
+</form>
+<hr>

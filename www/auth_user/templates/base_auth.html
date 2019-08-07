@@ -1,0 +1,81 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} OTSM GPS{% endblock %}</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'pa/vendors/iconfonts/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pa/vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'pa/css/style.css' %}">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{% static 'pa/images/favicon.png' %}"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth px-0 px-sm-4">
+            <div class="row w-100 p-0 m-0">
+                <div class="col-lg-4 mx-auto">
+                    <div class="auth-form-light text-left p-2 p-sm-5">
+                        <div class="brand-logo w-100 text-center">
+                            <span class="text-primary font-weight-bold">OTSM GPS</span>
+                        </div>
+
+                        <div class="content mt-3">
+                            {% if messages %}
+                                <ul class="list-unstyled">
+                                    {% for msg in messages %}
+                                        <li>
+                                            <div class="alert alert-{{ msg.level_tag }} alert-dismissible fade show"
+                                                 role="alert">
+                                                {{ msg.message }}
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                        </div> <!-- .content -->
+
+
+                        {% block content %}
+                        {% endblock %}
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+{% block script %}
+    <script src="{% static 'pa/vendors/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'pa/vendors/js/vendor.bundle.addons.js' %}"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="{% static 'pa/js/off-canvas.js' %}"></script>
+    <script src="{% static 'pa/js/misc.js' %}"></script>
+{% endblock %}
+<!-- endinject -->
+</body>
+
+</html>

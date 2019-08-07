@@ -1,0 +1,12 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<hr>
+<form id="flatform" action="{{ request.path }}" method="post" class="my-4">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="d-flex w-100">
+        <input type="submit" value="Добавить" class="btn btn-success flex-fill m-2 ajax_relation_submit">
+        <div class="btn btn-secondary m-2" onclick="$('.relation_types').hide(250);">Отмена</div>
+    </div>
+</form>
+<hr>

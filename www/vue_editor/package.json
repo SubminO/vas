@@ -14,7 +14,8 @@
     "network": "^0.4.1",
     "settings": "^0.1.1",
     "vue": "^2.6.10",
-    "vue-awesome": "^3.5.4"
+    "vue-awesome": "^3.5.4",
+    "vue-router": "^3.0.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

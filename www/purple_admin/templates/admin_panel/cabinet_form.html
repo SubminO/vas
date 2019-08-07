@@ -1,0 +1,14 @@
+{% extends 'admin_panel/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h4>{{ description }}</h4>
+<form action="{{ request.path }}" method="post" class="my-4">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="d-flex w-100">
+        <input type="submit" value="Сохранить" class="btn btn-success flex-fill m-2">
+        <a class="btn btn-secondary m-2" href="{{request.META.HTTP_REFERER}}">Отмена</a>
+    </div>
+</form>
+{% endblock %}

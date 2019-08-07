@@ -1,0 +1,54 @@
+<script>
+    $(function () {
+        $('body').on('submit', 'form#flatform', function (event) {
+            {#console.log('click');#}
+            {#$(this).parents('form')[0].submit(function (event) {#}
+            // Stop form from submitting normally
+            event.preventDefault();
+            alert('submit');
+
+            // Get some values from elements on the page:
+            var $form = $(this),
+                term = $form.serialize(),
+                url = $form.attr("action");
+            // Send the data using post
+            var posting = $.post(url, term);
+            // Put the results in a div
+            posting.done(function (data) {
+                {#var content = $(data).find("#content");#}
+                {#$("#result").empty().append(content);#}
+                $('#id_type').append(`<option value="${data.id}">${data.name}</option>`);
+                {#console.log(relations);#}
+                {#relations.val(relations_val);#}
+                $('.relation_types').hide(300);
+            });
+        });
+    });
+    $('body').on('click', 'div.ajax_relation', function (e) {
+        {#$('.ajax_relation').on('click', (function relation() {#}
+
+        $('.relation_types').hide();
+
+        $.ajax({
+            method: "POST",
+            url: "{% url 'admin_panel_route_platform_type_relation_ajax_add' %}"
+        })
+            .done(function (msg) {
+                    $('.relation_types').html(msg);
+                    $('.relation_types').show(300);
+                }
+            );
+    });
+
+    {#$('body').on('click', 'span.ajax_relation_delete', function (e) {#}
+    {#    var pk = $(this).attr('pk');#}
+    {#    var to_delete = $(this).parents('.delete')[0];#}
+    {#    $(to_delete).html('');#}
+    {#    $.ajax({#}
+    {#        method: "POST",#}
+    {#        url: "/cabinet/relation_delete/" + pk + '/'#}
+    {#    })#}
+    {#});#}
+
+
+</script>

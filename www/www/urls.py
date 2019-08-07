@@ -21,4 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('red/', include('editor.urls')),
     path('api/', include('editor.urls')),
+    path('auth/', include('auth_user.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
+    path('cabinet/', include('purple_admin.urls')),
 ]
