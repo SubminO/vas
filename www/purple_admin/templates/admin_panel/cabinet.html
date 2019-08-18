@@ -6,11 +6,19 @@
     <div class="card">
         <div class="card-header"><h4>Добро пожаловать в систему</h4></div>
         <div class="card-body p-2 p-sm-4">
-            <div class="btn btn-gradient-primary w-100 ajax_form"><i
-                    class="mdi mdi-library-plus pr-sm-1 d-inline d-sm-none"></i><span class="d-none d-sm-inline">Добавить объект в систему</span>
+            <div class="row d-flex justify-content-around">
+                <a href="{% url 'admin_panel_route_list' %}" class="btn btn-gradient-primary flex-fill m-2">
+                    <i class="mdi mdi-road menu-icon"></i><span class="menu-title">Маршруты</span>
+                </a>
+                <a href="{% url 'admin_panel_route_platform_list' %}" class="btn btn-gradient-primary flex-fill m-2">
+                    <i class="mdi mdi-vector-point menu-icon"></i><span class="menu-title">Остановки</span>
+                </a>
             </div>
-            <div class="flat_types"></div>
-            <div class="ajax-body"></div>
+            {#            <div class="btn btn-gradient-primary w-100 ajax_form"><i#}
+            {#                    class="mdi mdi-library-plus pr-sm-1 d-inline d-sm-none"></i><span class="d-none d-sm-inline">Добавить объект в систему</span>#}
+            {#            </div>#}
+            {#            <div class="flat_types"></div>#}
+            {#            <div class="ajax-body"></div>#}
         </div>
     </div>
 

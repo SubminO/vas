@@ -1,6 +1,6 @@
-import sys
 import getopt
 import json
+import sys
 
 
 def usage():
@@ -73,7 +73,7 @@ def parse_node(node):
         name = properties["name"]
         route = properties["ref"]
 
-        assert geometry["type"] in ("MultiLineString", "LineString"),\
+        assert geometry["type"] in ("MultiLineString", "LineString"), \
             f"Unknown geometry type {geometry['type']}"
 
         if geometry["type"] == "LineString":
@@ -88,13 +88,13 @@ def parse_node(node):
 
             chunk = {
                 "model": "redit.Route",
-                 "pk": rpk,
-                 "fields": {
+                # "pk": rpk,
+                "fields": {
                     "longitude": longitude,
                     "latitude": latitude,
                     "name": name,
                     "route": route
-                 }
+                }
             }
 
             points.append(chunk)

@@ -23,9 +23,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wp82&o$dlc8j%5uwso6*y**-ze5ozyv!n+@^8ssayqqj3e6#s7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.getenv('DEBUG_VALUE') == "FALSE":
+    DEBUG = False
+else:
+    DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '_',
+    'localhost',
+    '127.0.0.1',
+    'vas.submin.ru',
+    'submin.ru',
+    'vas',
+]
 
 # Application definition
 
@@ -84,12 +94,24 @@ WSGI_APPLICATION = 'www.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if os.getenv('DATABASE_BACKENDS_MYSQL') == "TRUE":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.getenv('DB_NAME') or 'DB_NAME',
+            'USER': os.getenv('DB_USER') or 'DB_USER',
+            'PASSWORD': os.getenv('DB_PASSWORD') or 'DB_PASSWORD',
+            'HOST': os.getenv('DB_HOST') or 'localhost',  # Or an IP Address that your DB is hosted on
+            # 'PORT': '3306',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -114,9 +136,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'Europe/Samara'
+SELECT2_DATA_LOCALE = 'ru-RU'
+
+TIME_ZONE = 'Europe/Saratov'
 
 USE_I18N = True
 
@@ -128,7 +152,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/uploads')
+MEDIA_URL = '/media/'
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CORS_ORIGIN_ALLOW_ALL = True
 

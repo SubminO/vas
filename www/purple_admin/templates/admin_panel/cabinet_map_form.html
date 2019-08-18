@@ -57,7 +57,7 @@
             }, 350);
 
             {% if form.initial %}
-                marker = new L.marker([{{ form.initial.latitude }}, {{ form.initial.longitude }}]); // set
+                marker = new L.marker([{{ form.initial.latitude|stringformat:"e" }}, {{ form.initial.longitude|stringformat:"e" }}]); // set
                 marker.addTo(mymap);
             {% endif %}
         });

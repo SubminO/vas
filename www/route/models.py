@@ -46,8 +46,8 @@ class RoutePoint(models.Model):
 
 class PlatformType(models.Model):
     """Описывает типы остановок"""
-    name = models.CharField(max_length=100, unique=True, help_text="Название типа остановки")
-    description = models.TextField(max_length=500, help_text="Краткое описани типа остановки", blank=True)
+    name = models.CharField(max_length=100, unique=True, verbose_name="Тип остановки", help_text="Название типа остановки")
+    description = models.TextField(max_length=500, verbose_name="Описание", help_text="Краткое описани типа остановки", blank=True)
 
     model_type = 'route_platform_type'
     model_description = 'Внесение типа остановки'

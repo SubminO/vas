@@ -4,21 +4,21 @@
 {% block content %}
     {#    <a href="{% url 'admin_panel_news_add' %}" class="btn btn-success w-100 mb-3">Добавить новость</a>#}
     <a class="btn btn-gradient-primary w-100" href="{{ model_type }}_add"><i
-            class="mdi mdi-library-plus pr-sm-1 d-inline d-sm-none"></i><span class="d-none d-sm-inline">Добавить объект в систему</span>
+            class="mdi mdi-library-plus pr-sm-1 d-inline d-sm-none"></i> Добавить<span class="d-none d-sm-inline"> объект в систему</span>
     </a>
     <div class="ajax-body"></div>
-    <div class="row p-3">
+    <div class="row p-3 d-none d-sm-flex">
         <div class="col-sm">Название</div>
         <div class="col-sm">Описание</div>
-        <div class="col-sm">Дата создания</div>
+{#        <div class="col-sm">Дата создания</div>#}
         <div class="col-sm-1"></div>
     </div>
     {% for obj in objects %}
         <div class="row p-3 border-bottom">
-            <div class="col-sm my-auto">{{ obj.name|truncatechars:50 }}</div>
-            <div class="col-sm my-auto">{{ obj.description|truncatechars:50 }}</div>
-            <div class="col-sm my-auto">{{ obj.date_created|date }}</div>
-            <div class="col-sm-1 my-auto">
+            <div class="col-sm my-auto"><span class="d-sm-none font-weight-bold">Название: </span>{{ obj.name|truncatechars:50 }}</div>
+            <div class="col-sm my-auto"><span class="d-sm-none font-weight-bold">Описание: </span>{{ obj.description|truncatechars:50 }}</div>
+{#            <div class="col-sm my-auto">{{ obj.date_created|date }}</div>#}
+            <div class="col-sm-1 my-auto text-sm-left text-right">
 {#                <div href="{% url 'admin_panel_{{ obj.type }}_edit' pk=obj.pk %}" class="btn btn-primary m-2 p-2 ajax_edit" pk="{{ obj.pk }}">#}
                 <a href="{{ obj.model_type }}_edit/{{ obj.pk }}" class="btn btn-primary m-2 p-2" pk="{{ obj.pk }}">
                     <i class="mdi mdi-tooltip-edit"></i>

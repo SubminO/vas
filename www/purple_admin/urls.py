@@ -14,6 +14,6 @@ urlpatterns = [
     path('route_platform_delete/<int:pk>/', views.cabinet_delete, {'type': 'route_platform'},
          name='admin_panel_route_platform_delete'),
     path('route_relation_add_ajax', views.cabinet_add, {'type': 'route_platform_type'}, name='admin_panel_route_platform_type_relation_ajax_add'),
-    path('route_add', views.ajax_add, {'type': 'route'}, name='admin_panel_ajax_add'),
+    # path('route_add', views.ajax_add, {'type': 'route'}, name='admin_panel_ajax_add'),
 ]
 

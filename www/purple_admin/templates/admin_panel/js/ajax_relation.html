@@ -5,7 +5,6 @@
             {#$(this).parents('form')[0].submit(function (event) {#}
             // Stop form from submitting normally
             event.preventDefault();
-            alert('submit');
 
             // Get some values from elements on the page:
             var $form = $(this),
@@ -48,7 +47,7 @@
     {#        method: "POST",#}
     {#        url: "/cabinet/relation_delete/" + pk + '/'#}
     {#    })#}
-    {#});#}
+    {# });#}
 
 
 </script>
