@@ -1,5 +1,11 @@
 from django import forms
-from route.models import PlatformType, RoutePlatform, RoutePoint, Route
+from route.models import PlatformType, RoutePlatform, RoutePoint, Route, BusModel
+
+
+class BusModelForm(forms.ModelForm):
+    class Meta:
+        model = BusModel
+        exclude = ()
 
 
 class RouteForm(forms.ModelForm):

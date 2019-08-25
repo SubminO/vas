@@ -1,0 +1,1486 @@
+[
+  {
+    "model": "route.routeplatform",
+    "pk": 1,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "10 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0186393,
+      "latitude": 47.83179,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 2,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041c\u0435\u0434\u0441\u0430\u043d\u0447\u0430\u0441\u0442\u044c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0258134,
+      "latitude": 47.8363079,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 3,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u043b\u043e\u0432\u0430\u043a\u0438\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0213324,
+      "latitude": 47.8241462,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 4,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u043a\u0432\u0435\u0440 \u0420\u0422\u0421",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0199304,
+      "latitude": 47.8337099,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 5,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "7-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0274809,
+      "latitude": 47.8359076,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 6,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0410\u043b\u043b\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0240202,
+      "latitude": 47.8397271,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 7,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041a\u043e\u043b\u043e\u0441\u043e\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0232107,
+      "latitude": 47.8288205,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 8,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0440\u043d\u0430\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0212709,
+      "latitude": 47.8251637,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 9,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u0443\u0442\u0435\u043f\u0440\u043e\u0432\u043e\u0434",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9921647,
+      "latitude": 47.7962649,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 10,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0182755,
+      "latitude": 47.8194862,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 11,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0180179,
+      "latitude": 47.7997439,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 12,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0412\u043e\u043a\u0437\u0430\u043b\u044c\u043d\u0430\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9967959,
+      "latitude": 47.8041141,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 13,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0414\u0435\u0442\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21162",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0247407,
+      "latitude": 47.825423,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 14,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "1 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0107365,
+      "latitude": 47.7799622,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 15,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u0430\u044f \"\u0412\u043e\u0434\u043d\u044b\u0439 \u0441\u0442\u0430\u0434\u0438\u043e\u043d\"",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0150072,
+      "latitude": 47.7939902,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 16,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0428\u043b\u044e\u0437\u044b",
+      "type": 1,
+      "route": null,
+      "longitude": 52.018458,
+      "latitude": 47.7725926,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 17,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "5\u0430 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0207382,
+      "latitude": 47.818712,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 18,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0420\u044b\u043d\u043e\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0095516,
+      "latitude": 47.7980849,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 19,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0410\u0422\u041a-1",
+      "type": 1,
+      "route": null,
+      "longitude": 52.007387,
+      "latitude": 47.7874655,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 20,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u0430\u0448\u043c\u0430\u0447\u043e\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0113189,
+      "latitude": 47.7940332,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 21,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0425\u043b\u0435\u0431\u043e\u0437\u0430\u0432\u043e\u0434",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9992749,
+      "latitude": 47.8098347,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 22,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0443\u0440\u0438\u0441\u0442",
+      "type": 1,
+      "route": null,
+      "longitude": 52.011004,
+      "latitude": 47.7912148,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 23,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u043a\u0442\u044f\u0431\u0440\u044c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0338949,
+      "latitude": 47.7818151,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 24,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u0447\u0442\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.009716,
+      "latitude": 47.7975219,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 25,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0413\u043e\u0440\u043e\u0434\u0441\u043a\u043e\u0439 \u0414\u041a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0120272,
+      "latitude": 47.7909207,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 26,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041a\u043e\u0441\u043c\u043e\u0441",
+      "type": 1,
+      "route": null,
+      "longitude": 52.019699,
+      "latitude": 47.7835183,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 27,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0410\u044d\u043b\u0438\u0442\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0226849,
+      "latitude": 47.8420338,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 28,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0443\u043c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0298716,
+      "latitude": 47.7931991,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 29,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u043e\u043b\u044c\u043d\u0438\u0447\u043d\u044b\u0439 \u0433\u043e\u0440\u043e\u0434\u043e\u043a - \u0445\u0438\u0440\u0443\u0440\u0433\u0438\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0238741,
+      "latitude": 47.7956396,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 30,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0413\u0410",
+      "type": 1,
+      "route": null,
+      "longitude": 52.02668,
+      "latitude": 47.7957951,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 31,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0413\u0440\u0438\u0444",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0297165,
+      "latitude": 47.7928128,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 32,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041c\u0430\u0434\u043e\u043d\u043d\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0307202,
+      "latitude": 47.7829298,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 33,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "11 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0205996,
+      "latitude": 47.8381688,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 34,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0417\u0430\u043c\u043e\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0188389,
+      "latitude": 47.8391763,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 35,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0420\u0443\u0441\u044c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0190118,
+      "latitude": 47.8196669,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 36,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0162701,
+      "latitude": 47.8267538,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 37,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0414\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0206601,
+      "latitude": 47.8314991,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 38,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "8\u0430 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0176744,
+      "latitude": 47.8232059,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 39,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041c\u0438\u043b\u0435\u043d\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.021174,
+      "latitude": 47.8396922,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 40,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041a\u043e\u043b\u0438\u0437\u0435\u0439",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0256302,
+      "latitude": 47.8323591,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 41,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0420\u043e\u043a\u043e\u0442",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0056366,
+      "latitude": 47.7882098,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 42,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0412\u043e\u043a\u0437\u0430\u043b",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0029161,
+      "latitude": 47.7900966,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 43,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0414\u0435\u0442\u0441\u043a\u0438\u0439 \u043c\u0438\u0440",
+      "type": 1,
+      "route": null,
+      "longitude": 52.030169,
+      "latitude": 47.782556,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 44,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0429\u043e\u0440\u0441\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0123294,
+      "latitude": 47.8075044,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 45,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21163",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0061018,
+      "latitude": 47.7957241,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 46,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0413\u043e\u0440\u0433\u0430\u0437",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0151523,
+      "latitude": 47.8128259,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 47,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041c\u043e\u043b\u043e\u0434\u0451\u0436\u043d\u044b\u0439",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0070085,
+      "latitude": 47.7969217,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 48,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0440\u0438 \u0431\u043e\u0433\u0430\u0442\u044b\u0440\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0041568,
+      "latitude": 47.792028,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 49,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0414\u0435\u0442\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21161",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0313866,
+      "latitude": 47.7881413,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 50,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0430\u043b\u044e\u0442",
+      "type": 1,
+      "route": null,
+      "longitude": 52.031523,
+      "latitude": 47.7742774,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 51,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u0431\u0435\u043b\u0438\u0441\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0308348,
+      "latitude": 47.7728344,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 52,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041d\u043e\u0432\u0438\u043d\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0251479,
+      "latitude": 47.7826352,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 53,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u0434\u0435\u0436\u0434\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0238128,
+      "latitude": 47.7830098,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 54,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0442\u0430\u0440\u0430\u044f \u043f\u0440\u0438\u0441\u0442\u0430\u043d\u044c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0311026,
+      "latitude": 47.7408258,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 55,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043f\u043e \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044e \"\u041f\u0440\u043e\u0444\u0438\u043b\u0430\u043a\u0442\u043e\u0440\u0438\u0439\"",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0080462,
+      "latitude": 47.8265366,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 56,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u0435\u0442\u043e\u043d\u043d\u044b\u0439 \u0437\u0430\u0432\u043e\u0434",
+      "type": 1,
+      "route": null,
+      "longitude": 52.035817,
+      "latitude": 47.7619171,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 57,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0420\u044b\u043d\u043e\u043a 4\u0431",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0033178,
+      "latitude": 47.8166081,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 58,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043f\u043e \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044e",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0144397,
+      "latitude": 47.8260405,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 59,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0422\u041e \u0412\u0410\u0417",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0010047,
+      "latitude": 47.8134548,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 60,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0428\u0435\u0432\u0447\u0435\u043d\u043a\u043e",
+      "type": 1,
+      "route": null,
+      "longitude": 52.002939,
+      "latitude": 47.8069036,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 61,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0428\u043a\u043e\u043b\u0430 \u211612",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0195743,
+      "latitude": 47.7900991,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 62,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u0430\u043b\u0430\u0442\u043e\u043d",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0157362,
+      "latitude": 47.8376847,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 63,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u043e\u043b\u044c\u043d\u0438\u0447\u043d\u044b\u0439 \u0433\u043e\u0440\u043e\u0434\u043e\u043a - \u0442\u0435\u0440\u0430\u043f\u0438\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0223431,
+      "latitude": 47.7942637,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 64,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21165",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0172999,
+      "latitude": 47.8292308,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 65,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u041f\u0410\u041a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0397684,
+      "latitude": 47.8073304,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 66,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0414\u0437\u0435\u0440\u0436\u0438\u043d\u0441\u043a\u043e\u0433\u043e",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0413625,
+      "latitude": 47.7939893,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 67,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0417\u0430\u043f\u0440\u0430\u0432\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.039174,
+      "latitude": 47.8100981,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 68,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041d\u043e\u0432\u0430\u044f \u043f\u0440\u0438\u0441\u0442\u0430\u043d\u044c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0368119,
+      "latitude": 47.8165745,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 69,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044e",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0091001,
+      "latitude": 47.8012748,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 70,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21161",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0422758,
+      "latitude": 47.7864117,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 71,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0430\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0415366,
+      "latitude": 47.8004975,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 72,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0438\u0442\u043e\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.019231,
+      "latitude": 47.7861509,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 73,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u0430\u0440\u043a",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0313782,
+      "latitude": 47.8305686,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 74,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0410\u043a\u0430\u0434\u0435\u043c\u0438\u044f \u043f\u0440\u0430\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0443208,
+      "latitude": 47.7763386,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 75,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u043e\u043b\u044c\u043d\u0438\u0446\u0430 \u0432\u043e\u0434\u043d\u0438\u043a\u043e\u0432",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0434844,
+      "latitude": 47.7721793,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 76,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u0423 \u21166",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0426437,
+      "latitude": 47.7843106,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 77,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0420\u044b\u0431\u0430\u043b\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0432213,
+      "latitude": 47.7801944,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 78,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0413\u042d\u041c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.040018,
+      "latitude": 47.7644007,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 79,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u042f\u043d\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0291691,
+      "latitude": 47.7497031,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 80,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0411\u0438\u0440\u044e\u0437\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0269928,
+      "latitude": 47.7721245,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 81,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041e\u043b\u0438\u043c\u043f",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0341925,
+      "latitude": 47.7774401,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 82,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u0436\u0430\u0440\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u211621",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0358125,
+      "latitude": 47.7782437,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 83,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21166",
+      "type": 1,
+      "route": null,
+      "longitude": 52.026408,
+      "latitude": 47.7776321,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 84,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0430\u044f\u043d\u044b",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0348898,
+      "latitude": 47.7711929,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 85,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0443\u043b\u0438\u0446\u0430 \u0411\u0440\u0430\u0442\u044c\u0435\u0432 \u0417\u0430\u0445\u0430\u0440\u043e\u0432\u044b\u0445",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0390127,
+      "latitude": 47.7717192,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 86,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "60 \u043b\u0435\u0442 \u0421\u0421\u0421\u0420",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0380074,
+      "latitude": 47.7690313,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 87,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0415\u041c\u041a",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9888779,
+      "latitude": 47.8312423,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 88,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0417\u0417\u0414",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9837113,
+      "latitude": 47.779672,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 89,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041c\u0423\u041f \u0411\u042d\u0422",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9859462,
+      "latitude": 47.783944,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 90,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041f\u043e\u0432\u043e\u0440\u043e\u0442 \u043d\u0430 \u0421\u0430\u0440\u0430\u0442\u043e\u0432",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9892488,
+      "latitude": 47.7905959,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 91,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u042d\u0426-4",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9802455,
+      "latitude": 47.7730702,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 92,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u043f\u0440\u043e\u0445\u043e\u0434\u043d\u0430\u044f",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9744229,
+      "latitude": 47.7623468,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 93,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0413\u0440\u0438\u0431\u043e\u0435\u0434\u043e\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0463992,
+      "latitude": 47.8143064,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 94,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041b\u043e\u043c\u043e\u043d\u043e\u0441\u043e\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0497486,
+      "latitude": 47.8154921,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 95,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0435\u043b\u044c\u0445\u043e\u0437\u0442\u0435\u0445\u043d\u0438\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.049098,
+      "latitude": 47.8086171,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 96,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u0443\u0432\u043e\u0440\u043e\u0432\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0409015,
+      "latitude": 47.8119622,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 97,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0428\u043a\u043e\u043b\u0430 \u21164",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0445055,
+      "latitude": 47.804784,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 98,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u042d\u043d\u0433\u0435\u043b\u044c\u0441\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0437991,
+      "latitude": 47.8144409,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 99,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "20 \u043b\u0435\u0442 \u0412\u041b\u041a\u0421\u041c",
+      "type": 1,
+      "route": null,
+      "longitude": 52.0405568,
+      "latitude": 47.7809846,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 100,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0418\u0432\u0430\u043d\u043e\u0432\u043a\u0430 1",
+      "type": 1,
+      "route": null,
+      "longitude": 51.994434,
+      "latitude": 47.7471609,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 101,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0422\u0440\u0438\u043e",
+      "type": 1,
+      "route": null,
+      "longitude": 52.007791,
+      "latitude": 47.7989864,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 102,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u0421\u041f\u0422\u0423-58",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9832949,
+      "latitude": 47.7213683,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 103,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "1 \u0418\u0432\u0430\u043d\u043e\u0432\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9937109,
+      "latitude": 47.7462637,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 104,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "\u041a\u043e\u043d\u0435\u0447\u043d\u0430\u044f \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043c\u0430\u0440\u0448\u0440\u0443\u0442\u0430 \u2116 201-202",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9835016,
+      "latitude": 47.721431,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 105,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "3 \u0418\u0432\u0430\u043d\u043e\u0432\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9872435,
+      "latitude": 47.7339295,
+      "description": ""
+    }
+  },
+  {
+    "model": "route.routeplatform",
+    "pk": 106,
+    "fields": {
+      "prev": null,
+      "next": null,
+      "name": "2 \u0418\u0432\u0430\u043d\u043e\u0432\u043a\u0430",
+      "type": 1,
+      "route": null,
+      "longitude": 51.9907906,
+      "latitude": 47.7407319,
+      "description": ""
+    }
+  }
+]

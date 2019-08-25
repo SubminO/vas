@@ -15,5 +15,10 @@ urlpatterns = [
          name='admin_panel_route_platform_delete'),
     path('route_relation_add_ajax', views.cabinet_add, {'type': 'route_platform_type'}, name='admin_panel_route_platform_type_relation_ajax_add'),
     # path('route_add', views.ajax_add, {'type': 'route'}, name='admin_panel_ajax_add'),
+    # Админка ТС
+    path('ts_list', views.cabinet_list, {'type': 'ts'}, name='admin_panel_ts_list'),
+    path('ts_add', views.cabinet_add, {'type': 'ts'}, name='admin_panel_ts_add'),
+    path('ts_edit/<int:pk>/', views.cabinet_edit, {'type': 'ts'}, name='admin_panel_ts_edit'),
+    path('ts_delete/<int:pk>/', views.cabinet_delete, {'type': 'ts'}, name='admin_panel_ts_delete'),
 ]
 

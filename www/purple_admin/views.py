@@ -3,18 +3,21 @@ from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 
-from route.models import PlatformType, Route, RoutePlatform, RoutePoint
-from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm
+from route.models import PlatformType, Route, RoutePlatform, RoutePoint, BusModel
+from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm
+
 
 @login_required
 def cabinet(request):
     return render(request, 'admin_panel/cabinet.html')
+
 
 @login_required
 def cabinet_delete(request, pk, type):
     models_by_type = {
         'route': Route,
         'route_platform': RoutePlatform,
+        'ts': BusModel
         # 'flat_type': RealEstateFlatTypeModel,
     }
     Model = models_by_type[type]
@@ -31,12 +34,14 @@ def cabinet_add(request, type):
         'route': Route,
         'route_platform': RoutePlatform,
         'route_platform_type': PlatformType,
+        'ts': BusModel,
     }
 
     form_by_type = {
         'route': RouteForm,
         'route_platform': RoutePlatformForm,
         'route_platform_type': PlatformTypeForm,
+        'ts': BusModelForm,
     }
 
     template_by_type = {
@@ -71,6 +76,7 @@ def cabinet_list(request, type):
     models_by_type = {
         'route': Route,
         'route_platform': RoutePlatform,
+        'ts': BusModel,
         # 'flat_type': RealEstateFlatTypeModel,
     }
     model = models_by_type[type]
@@ -88,12 +94,14 @@ def cabinet_edit(request, pk, type):
         'route': Route,
         'route_platform': RoutePlatform,
         'route_platform_type': PlatformType,
+        'ts': BusModel,
     }
 
     form_by_type = {
         'route': RouteForm,
         'route_platform': RoutePlatformForm,
         'route_platform_type': PlatformTypeForm,
+        'ts': BusModelForm,
     }
 
     template_by_type = {

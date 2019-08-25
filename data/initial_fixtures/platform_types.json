@@ -1,1 +1,26 @@
-[{"model": "route.PlatformType", "pk": 1, "fields": {"name": "platform", "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430"}}, {"model": "route.PlatformType", "pk": 2, "fields": {"name": "platform_exit_only", "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043f\u043e \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044e"}}, {"model": "route.PlatformType", "pk": 3, "fields": {"name": "platform_endpoint", "description": "\u041a\u043e\u043d\u0435\u0447\u043d\u0430\u044f"}}]
+[
+  {
+    "model": "route.PlatformType",
+    "pk": 1,
+    "fields": {
+      "name": "platform",
+      "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430"
+    }
+  },
+  {
+    "model": "route.PlatformType",
+    "pk": 2,
+    "fields": {
+      "name": "platform_exit_only",
+      "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043f\u043e \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044e"
+    }
+  },
+  {
+    "model": "route.PlatformType",
+    "pk": 3,
+    "fields": {
+      "name": "platform_endpoint",
+      "description": "\u041a\u043e\u043d\u0435\u0447\u043d\u0430\u044f"
+    }
+  }
+]
