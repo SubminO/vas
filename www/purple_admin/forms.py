@@ -11,13 +11,13 @@ class BusModelForm(forms.ModelForm):
 class RouteForm(forms.ModelForm):
     class Meta:
         model = Route
-        exclude = ()
+        exclude = ('state',)
 
 
 class RoutePlatformForm(forms.ModelForm):
     class Meta:
         model = RoutePlatform
-        fields = ('name', 'description', 'type', 'latitude', 'longitude')
+        fields = ('name', 'description', 'latitude', 'longitude')
         widgets = {
             'latitude': forms.HiddenInput(),
             'longitude': forms.HiddenInput(),
@@ -28,18 +28,3 @@ class PlatformTypeForm(forms.ModelForm):
     class Meta:
         model = PlatformType
         exclude = ()
-
-# class RealEstateObjectTypeForm(forms.ModelForm):
-#     class Meta:
-#         model = RealEstateObjectTypeModel
-#         exclude = ('date_created', 'date_updated')
-#
-#
-# class RealEstateObjectForm(forms.ModelForm):
-#     class Meta:
-#         model = RealEstateObjectModel
-#         exclude = ('date_created', 'date_updated')
-#         widgets = {
-#             'latitude': forms.HiddenInput(),
-#             'longitude': forms.HiddenInput(),
-#         }

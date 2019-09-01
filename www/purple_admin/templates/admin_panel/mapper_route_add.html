@@ -1,0 +1,14 @@
+{% extends 'admin_panel/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'purple_admin/style.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="border border-secondary rounded flex-fill subway-item" style="height: 100px;"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

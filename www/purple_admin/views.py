@@ -1,10 +1,10 @@
-from django.http import JsonResponse
-from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import login_required
+from django.forms.models import model_to_dict
+from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
-from route.models import PlatformType, Route, RoutePlatform, RoutePoint, BusModel
 from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm
+from route.models import PlatformType, Route, RoutePlatform, BusModel
 
 
 @login_required
@@ -180,3 +180,14 @@ def ajax_add(request, type):
         'model_description': Form.Meta.model.model_description,
     }
     return render(request, 'admin_panel/' + template, context=context)
+
+
+def mapped_route_add(request):
+    """
+    Страница конструктора, которая позволит задавать последовательность остановок,
+    Далее, открыть карту и построить промежуточные маршруты,
+    Подтвердить и исходранить маршрут в БД.
+    :param request:
+    :return: Template of constructor
+    """
+    return render(request, 'admin_panel/mapper_route_add.html')
