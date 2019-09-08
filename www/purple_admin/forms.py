@@ -28,3 +28,13 @@ class PlatformTypeForm(forms.ModelForm):
     class Meta:
         model = PlatformType
         exclude = ()
+
+
+class RoutePlatfromFormset(forms.Form):
+    name = forms.CharField(
+        label='Book Name',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter Book Name here'
+        })
+    )

@@ -190,4 +190,8 @@ def mapped_route_add(request):
     :param request:
     :return: Template of constructor
     """
-    return render(request, 'admin_panel/mapper_route_add.html')
+    routes = Route.objects.all()
+    context = {
+        'routes': routes
+    }
+    return render(request, 'admin_panel/mapper_route_add.html', context=context)

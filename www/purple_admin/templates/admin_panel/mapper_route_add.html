@@ -7,8 +7,44 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <div class="border border-secondary rounded flex-fill subway-item" style="height: 100px;"></div>
+                <div id="add_match_form">
+                    <add-match-form></add-match-form>
+                </div>
+
+                <template id="add-match-template">
+                    <div v-for="n in 10">1</div>
+                        <select class="w-100 custom-select" v-model="selected_game">
+                            <option v-for="game in games" :value="game.value">[[ game.text ]]</option>
+                        </select>
+                </template>
             </div>
         </div>
     </div>
+{% endblock %}
+{% block scripts %}
+    {{ block.super }}
+    <script>
+        Vue.component('add-match-form', {
+            delimiters: ['[[', ']]'],
+            template: '#add-match-template',
+            data: function () {
+                return {
+                    games: [
+                        {'value': 1, 'text': 'Game 1'},
+                        {'value': 4, 'text': 'Game 4'}
+                    ],
+                    selected_game: null
+                }
+            },
+            methods: {
+                newSelect() {
+                }
+            }
+        });
+
+        new Vue({
+            delimiters: ['[[', ']]'],
+            el: "#add_match_form"
+        })
+    </script>
 {% endblock %}
