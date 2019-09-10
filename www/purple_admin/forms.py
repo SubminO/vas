@@ -1,5 +1,7 @@
 from django import forms
-from route.models import PlatformType, RoutePlatform, RoutePoint, Route, BusModel
+from django.forms import modelformset_factory
+
+from route.models import PlatformType, RoutePlatform, Route, BusModel, RoutePoint
 
 
 class BusModelForm(forms.ModelForm):
@@ -12,6 +14,12 @@ class RouteForm(forms.ModelForm):
     class Meta:
         model = Route
         exclude = ('state',)
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите навзание маршрута'
+            })
+        }
 
 
 class RoutePlatformForm(forms.ModelForm):
@@ -30,11 +38,24 @@ class PlatformTypeForm(forms.ModelForm):
         exclude = ()
 
 
-class RoutePlatfromFormset(forms.Form):
-    name = forms.CharField(
-        label='Book Name',
-        widget=forms.TextInput(attrs={
-            'class': 'form-control',
-            'placeholder': 'Enter Book Name here'
+class RouteSelectForm(forms.Form):
+    route = forms.ChoiceField(label='Выберите маршрут', choices=Route.objects.all())
+    widgets = {
+        'route': forms.Select(attrs={
+            'class': 'custom-select',
         })
-    )
+    }
+
+
+RoutePlatformFormset = modelformset_factory(
+    RoutePoint,
+    fields=('route_platform',),
+    extra=1,
+    widgets={
+        'route_platform': forms.Select(attrs={
+            'class': 'custom-select',
+            'ini': 1,
+            'placeholder': 'Enter Author Name here'
+        })
+    }
+)

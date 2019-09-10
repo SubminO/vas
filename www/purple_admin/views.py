@@ -3,8 +3,9 @@ from django.forms.models import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
-from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm
-from route.models import PlatformType, Route, RoutePlatform, BusModel
+from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm, RoutePlatformFormset, \
+    RouteSelectForm
+from route.models import PlatformType, Route, RoutePlatform, BusModel, RoutePoint
 
 
 @login_required
@@ -190,8 +191,40 @@ def mapped_route_add(request):
     :param request:
     :return: Template of constructor
     """
-    routes = Route.objects.all()
-    context = {
-        'routes': routes
-    }
-    return render(request, 'admin_panel/mapper_route_add.html', context=context)
+
+    template_name = 'admin_panel/mapper_route_add.html'
+    if request.method == 'GET':
+        # route_form = RouteSelectForm(request.GET or None)
+        routes = Route.objects.all()
+        formset = RoutePlatformFormset(queryset=RoutePoint.objects.none())
+    elif request.method == 'POST':
+        # route_form = RouteSelectForm(request.POST)
+        route_id = request.POST.get('route')
+        route = get_object_or_404(Route, pk=route_id)
+        formset = RoutePlatformFormset(request.POST)
+        platform = PlatformType.objects.get(pk=1)
+        platform_endpoint = PlatformType.objects.get(pk=3)
+        last_route_point = None
+        if formset.is_valid():
+            # route = route_form.save()
+            for num, form in enumerate(formset, start=1):
+                route_point = form.save(commit=False)
+                route_point.latitude = route_point.route_platform.latitude
+                route_point.longitude = route_point.route_platform.longitude
+                route_point.route = route
+                if last_route_point:
+                    last_route_point.next = route_point
+                route_point.prev = last_route_point
+                # first iteration
+                if num == 1:
+                    route_point.route_platform_type = platform_endpoint
+                # last iteration
+                if num == len(formset):
+                    route_point.route_platform_type = platform_endpoint
+                route_point.save()
+                last_route_point = route_point
+            return redirect('admin_panel_cabinet')
+    return render(request, template_name, {
+        'routes': routes,
+        'formset': formset,
+    })

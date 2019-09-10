@@ -1,50 +1,112 @@
 {% extends 'admin_panel/base.html' %}
 {% load static %}
-{% block head %}
-    <link rel="stylesheet" href="{% static 'purple_admin/style.css' %}">
-{% endblock %}
+{% load crispy_forms_tags %}
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-                <div id="add_match_form">
-                    <add-match-form></add-match-form>
+    <div class="container mt-3">
+        <form class="form-horizontal" method="POST" action="">
+            {% csrf_token %}
+            <div class="row from-row my-2">
+                <div class="col-4">
+                    <label>Выберите маршрут для редактирования</label>
                 </div>
-
-                <template id="add-match-template">
-                    <div v-for="n in 10">1</div>
-                        <select class="w-100 custom-select" v-model="selected_game">
-                            <option v-for="game in games" :value="game.value">[[ game.text ]]</option>
+                <div class="col">
+                    <div class="input-group input-group-sm">
+                        <select name="route" id="route_1" class="custom-select">
+                            {% for r in routes %}
+                                <option {% if forloop.first %}selected{% endif %} value="{{ r.id }}">{{ r.name }}</option>
+                            {% endfor %}
                         </select>
-                </template>
+                    </div>
+                </div>
             </div>
-        </div>
+            <label>Задайте последовательность остановок</label>
+            {{ formset.management_form }}
+            {% for form in formset %}
+                <div class="row form-row my-2">
+                    <div class="col-4">
+                    </div>
+                    <div class="col">
+                        <div class="input-group input-group-sm">
+                            {{ form.route_platform }}
+                            <div class="input-group-append">
+                                <button class="btn btn-success add-form-row">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="row spacer">
+                <div class="col-4 offset-2">
+                    <button type="submit" class="btn btn-block btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </form>
     </div>
 {% endblock %}
 {% block scripts %}
-    {{ block.super }}
-    <script>
-        Vue.component('add-match-form', {
-            delimiters: ['[[', ']]'],
-            template: '#add-match-template',
-            data: function () {
-                return {
-                    games: [
-                        {'value': 1, 'text': 'Game 1'},
-                        {'value': 4, 'text': 'Game 4'}
-                    ],
-                    selected_game: null
+    <script type="text/javascript">
+        function updateElementIndex(el, prefix, ndx) {
+            var id_regex = new RegExp('(' + prefix + '-\\d+)');
+            var replacement = prefix + '-' + ndx;
+            if ($(el).attr("for")) $(el).attr("for", $(el).attr("for").replace(id_regex, replacement));
+            if (el.id) el.id = el.id.replace(id_regex, replacement);
+            if (el.name) el.name = el.name.replace(id_regex, replacement);
+        }
+
+        function cloneMore(selector, prefix) {
+            var newElement = $(selector).clone(true);
+            var total = $('#id_' + prefix + '-TOTAL_FORMS').val();
+            newElement.find(':input:not([type=button]):not([type=submit]):not([type=reset])').each(function () {
+                var name = $(this).attr('name')
+                if (name) {
+                    name = name.replace('-' + (total - 1) + '-', '-' + total + '-');
+                    var id = 'id_' + name;
+                    $(this).attr({'name': name, 'id': id}).val('').removeAttr('checked');
                 }
-            },
-            methods: {
-                newSelect() {
+            });
+            newElement.find('label').each(function () {
+                var forValue = $(this).attr('for');
+                if (forValue) {
+                    forValue = forValue.replace('-' + (total - 1) + '-', '-' + total + '-');
+                    $(this).attr({'for': forValue});
+                }
+            });
+            total++;
+            $('#id_' + prefix + '-TOTAL_FORMS').val(total);
+            $(selector).after(newElement);
+            var conditionRow = $('.form-row:not(:last)');
+            conditionRow.find('.btn.add-form-row')
+                .removeClass('btn-success').addClass('btn-danger')
+                .removeClass('add-form-row').addClass('remove-form-row')
+                .html('-');
+            return false;
+        }
+
+        function deleteForm(prefix, btn) {
+            var total = parseInt($('#id_' + prefix + '-TOTAL_FORMS').val());
+            if (total > 1) {
+                btn.closest('.form-row').remove();
+                var forms = $('.form-row');
+                $('#id_' + prefix + '-TOTAL_FORMS').val(forms.length);
+                for (var i = 0, formCount = forms.length; i < formCount; i++) {
+                    $(forms.get(i)).find(':input').each(function () {
+                        updateElementIndex(this, prefix, i);
+                    });
                 }
             }
+            return false;
+        }
+
+        $(document).on('click', '.add-form-row', function (e) {
+            e.preventDefault();
+            cloneMore('.form-row:last', 'form');
+            return false;
+        });
+        $(document).on('click', '.remove-form-row', function (e) {
+            e.preventDefault();
+            deleteForm('form', $(this));
+            return false;
         });
 
-        new Vue({
-            delimiters: ['[[', ']]'],
-            el: "#add_match_form"
-        })
     </script>
 {% endblock %}

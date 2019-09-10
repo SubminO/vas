@@ -30,17 +30,10 @@ class Route(models.Model):
 
 
 class RoutePlatform(models.Model):
-    """Описывает остановки, как lonlat точку"""
-    # prev = models.ForeignKey("self", related_name="prev_platform", on_delete=models.CASCADE,
-    #                          null=True, help_text="предыдущая точка маршрута")
-    # next = models.ForeignKey("self", related_name="next_platform", on_delete=models.CASCADE,
-    #                          null=True, help_text="следующая точка маршрута")
-    #
+    """Описывает остановки, как lonlat точку
+        Используется для связи с точками"""
     name = models.CharField(max_length=100, unique=True, verbose_name="Краткое название остановки",
                             help_text="Название остановки")
-    # type = models.ForeignKey(PlatformType, on_delete=models.CASCADE, verbose_name="Тип остановки",
-    #                          help_text="ID типа остановки")
-    # route = models.ManyToManyField(Route, related_name='platforms', help_text="ID маршрута остановки")
     longitude = models.FloatField(help_text="долгота")
     latitude = models.FloatField(help_text="широта")
     description = models.TextField(max_length=500, verbose_name="Развернутое название остановки",
@@ -83,7 +76,7 @@ class RoutePoint(models.Model):
                              null=True, help_text="предыдущая точка маршрута")
     next = models.ForeignKey("self", on_delete=models.CASCADE, related_name="next_point",
                              null=True, help_text="следующая точка маршрута")
-    route = models.ForeignKey(Route, on_delete=models.CASCADE, help_text="ID маршрута")
+    route = models.ForeignKey(Route, on_delete=models.CASCADE, related_name='points', help_text="ID маршрута")
     route_platform = models.ForeignKey(RoutePlatform, on_delete=models.SET_NULL, null=True, default=None)
     route_platform_type = models.ForeignKey(PlatformType, on_delete=models.SET_NULL, null=True, default=None,
                                             verbose_name="Тип остановки", help_text="ID типа остановки")
