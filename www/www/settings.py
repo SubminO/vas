@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'route.apps.RouteConfig',
-    'editor.apps.EditorConfig',
+    'route',
+    'editor',
     'purple_admin',
     'auth_user',
 ]
@@ -160,6 +160,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures')]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
