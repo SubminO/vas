@@ -94,15 +94,15 @@ WSGI_APPLICATION = 'www.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if os.getenv('DATABASE_BACKENDS_MYSQL') == "TRUE":
+if os.getenv('DATABASE_BACKENDS_POSTGRES') == "TRUE":
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': os.getenv('DB_NAME') or 'DB_NAME',
             'USER': os.getenv('DB_USER') or 'DB_USER',
             'PASSWORD': os.getenv('DB_PASSWORD') or 'DB_PASSWORD',
             'HOST': os.getenv('DB_HOST') or 'localhost',  # Or an IP Address that your DB is hosted on
-            # 'PORT': '3306',
+            'PORT': os.getenv('DB_PORT') or '5432',
         }
     }
 else:

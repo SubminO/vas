@@ -39,6 +39,8 @@ class RoutePlatform(models.Model):
     description = models.TextField(max_length=500, verbose_name="Развернутое название остановки",
                                    help_text="Краткон описание остановки", blank=True)
 
+    order_number = models.IntegerField(default=1, verbose_name='Порядковый номер остановки  маршрута')
+
     model_type = 'route_platform'
     model_description = 'Внесение остановок в систему'
 
@@ -80,6 +82,8 @@ class RoutePoint(models.Model):
     route_platform = models.ForeignKey(RoutePlatform, on_delete=models.SET_NULL, null=True, default=None)
     route_platform_type = models.ForeignKey(PlatformType, on_delete=models.SET_NULL, null=True, default=None,
                                             verbose_name="Тип остановки", help_text="ID типа остановки")
+
+    order_number = models.IntegerField(default=1, verbose_name='Порядковый номер точки маршрута')
 
     longitude = models.FloatField(null=True, verbose_name="Долгота", help_text="долгота")
     latitude = models.FloatField(null=True, help_text="широта")
