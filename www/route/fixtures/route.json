@@ -1,0 +1,693 @@
+[
+{
+  "model": "route.route",
+  "pk": 2,
+  "fields": {
+    "name": "15",
+    "description": "\u041c\u0430\u0440\u0448\u0440\u0443\u0442 \u211615",
+    "state": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 2,
+  "fields": {
+    "name": "\u041c\u043e\u0441\u0442 \u043f\u043e\u0431\u0435\u0434\u044b",
+    "longitude": 47.82023549079896,
+    "latitude": 52.01987002215856,
+    "description": "",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 3,
+  "fields": {
+    "name": "8",
+    "longitude": 47.826790809631355,
+    "latitude": 52.01624185696633,
+    "description": "8 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 4,
+  "fields": {
+    "name": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0437\u0430\u043c\u043e\u043a",
+    "longitude": 47.839021682739265,
+    "latitude": 52.01881692717598,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0442\u0430\u0440\u044b\u0439 \u0437\u0430\u043c\u043e\u043a \u0432 \u0441\u0442\u043e\u0440\u043e\u043d\u0443 \u0436\u0438\u043b \u0433\u043e\u0440\u043e\u0434\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 5,
+  "fields": {
+    "name": "11-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d (\u043a\u043e\u043d\u0435\u0447\u043d\u0430\u044f)",
+    "longitude": 47.84775495529175,
+    "latitude": 52.019708263098856,
+    "description": "\u041a\u043e\u043d\u0435\u0447\u043d\u0430\u044f \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 15 \u043c\u0430\u0440\u0448\u0440\u0443\u0442\u0430 \u0432 11 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d\u0435",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 6,
+  "fields": {
+    "name": "\u0417\u0430\u043c\u043e\u043a",
+    "longitude": 47.83916115760804,
+    "latitude": 52.01869147847223,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0442\u0430\u0440\u044b\u0439 \u0437\u0430\u043c\u043e\u043a",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 7,
+  "fields": {
+    "name": "11-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "longitude": 47.839525938034065,
+    "latitude": 52.02116077247452,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 11-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 8,
+  "fields": {
+    "name": "\u0410\u044d\u043b\u0438\u0442\u0430",
+    "longitude": 47.8423798084259,
+    "latitude": 52.02257362270486,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0410\u044d\u043b\u0438\u0442\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 9,
+  "fields": {
+    "name": "\u041c\u0435\u0434\u0441\u0430\u043d\u0447\u0430\u0441\u0442\u044c",
+    "longitude": 47.83693492412567,
+    "latitude": 52.02752484834538,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041c\u0435\u0434\u0441\u0430\u043d\u0447\u0430\u0441\u0442\u044c",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 10,
+  "fields": {
+    "name": "7-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "longitude": 47.83589959144592,
+    "latitude": 52.02742912984579,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 7-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 11,
+  "fields": {
+    "name": "\u041a\u043e\u043b\u0438\u0437\u0435\u0439",
+    "longitude": 47.83372163772584,
+    "latitude": 52.02576227485059,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041a\u043e\u043b\u0438\u0437\u0435\u0439",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 12,
+  "fields": {
+    "name": "\u0414\u043e\u043d",
+    "longitude": 47.83146858215333,
+    "latitude": 52.02061608698587,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0440\u044b\u043d\u043e\u043a \u0414\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 13,
+  "fields": {
+    "name": "10-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "longitude": 47.832310795784004,
+    "latitude": 52.01908102856024,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 10-\u0439 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 14,
+  "fields": {
+    "name": "5-\u044f \u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430",
+    "longitude": 47.828813195228584,
+    "latitude": 52.017328026450045,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 5-\u044f \u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 15,
+  "fields": {
+    "name": "8\u0430 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "longitude": 47.82319128513336,
+    "latitude": 52.01761854755612,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 8\u0430 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 16,
+  "fields": {
+    "name": "\u0421\u0430\u0434\u043e\u0432\u0430\u044f",
+    "longitude": 47.79587030410767,
+    "latitude": 52.03534006757571,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0421\u0430\u0434\u043e\u0432\u0430\u044f",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 18,
+  "fields": {
+    "name": "\u041c\u043e\u0441\u0442 \u043f\u043e\u0431\u0435\u0434\u044b2(\u0421\u0442\u0430\u0440\u044b\u0439 \u0440\u043e\u0434\u0438\u043b\u044c\u043d\u044b\u0439 \u0434\u043e\u043c)",
+    "longitude": 47.79474914073944,
+    "latitude": 52.03579877322047,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041c\u043e\u0441\u0442 \u043f\u043e\u0431\u0435\u0434\u044b \u043d\u0430 \u043e\u0441\u0442\u0440\u043e\u0432\u043d\u043e\u0439 \u0447\u0430\u0441\u0442\u0438 \u0433\u043e\u0440\u043e\u0434\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 19,
+  "fields": {
+    "name": "\u0414\u0435\u0440\u0436\u0438\u043d\u0441\u043a\u043e\u0433\u043e",
+    "longitude": 47.795827388763435,
+    "latitude": 52.04143485836262,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0414\u0435\u0440\u0436\u0438\u043d\u0441\u043a\u043e\u0433\u043e (\u043e\u0441\u0442\u0440\u043e\u0432\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u044c )",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 20,
+  "fields": {
+    "name": "\u041c\u0443\u0437\u0435\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0438",
+    "longitude": 47.791112065315254,
+    "latitude": 52.04183740868164,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041c\u0443\u0437\u0435\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 \u0433. \u0411\u0430\u043b\u0430\u043a\u043e\u0432\u043e",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 21,
+  "fields": {
+    "name": "\u0423\u0441\u0430\u0434\u044c\u0431\u0430 \u041c\u0430\u043b\u044c\u0446\u0435\u0432\u044b\u0445",
+    "longitude": 47.786327004432685,
+    "latitude": 52.04241483108797,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0423\u0441\u0430\u0434\u044c\u0431\u0430 \u041c\u0430\u043b\u044c\u0446\u0435\u0432\u044b\u0445 (\u041f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430 \u21161)",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 22,
+  "fields": {
+    "name": "\u0421\u0442\u0430\u0440\u044b\u0439 \u0440\u044b\u043d\u043e\u043a",
+    "longitude": 47.783896923065186,
+    "latitude": 52.039874116702265,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0442\u0430\u0440\u044b\u0439 \u0440\u044b\u043d\u043e\u043a (\u0421\u0442\u0430\u0440\u0433\u0440\u0430\u0434)",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 23,
+  "fields": {
+    "name": "\u041e\u043a\u0442\u044f\u0431\u0440\u044c",
+    "longitude": 47.781858444213874,
+    "latitude": 52.03406292706663,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041e\u043a\u0442\u044f\u0431\u0440\u044c",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 24,
+  "fields": {
+    "name": "\u041e\u043b\u0438\u043c\u043f",
+    "longitude": 47.777352333068855,
+    "latitude": 52.03433023856414,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041e\u043b\u0438\u043c\u043f",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 25,
+  "fields": {
+    "name": "\u0421\u0430\u043b\u044e\u0442",
+    "longitude": 47.77432143688202,
+    "latitude": 52.03150853659935,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0433\u043e\u0441\u0442\u0438\u043d\u0438\u0446\u0430 \u0421\u0430\u043b\u044e\u0442",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 26,
+  "fields": {
+    "name": "\u0411\u0438\u0440\u044e\u0437\u0430",
+    "longitude": 47.77214348316193,
+    "latitude": 52.02698354103024,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0411\u0438\u0440\u044e\u0437\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 27,
+  "fields": {
+    "name": "6-\u044f \u043f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430",
+    "longitude": 47.77741134166718,
+    "latitude": 52.02647853500542,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 6-\u044f \u043f\u043e\u043b\u0438\u043a\u043b\u0438\u043d\u0438\u043a\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 28,
+  "fields": {
+    "name": "\u0421\u0413\u0410",
+    "longitude": 47.79576301574707,
+    "latitude": 52.02662706678116,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0421\u0430\u0440\u0430\u0442\u043e\u0432\u0441\u043a\u0430\u044f \u0433\u0443\u043c\u0430\u043d\u0438\u0442\u0430\u0440\u043d\u0430\u044f \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u044f(\u0411\u044b\u0432\u0448\u0430\u044f)",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 29,
+  "fields": {
+    "name": "\u0411\u043e\u043b\u044c\u043d\u0438\u0447\u043d\u044b\u0439 \u0433\u043e\u0440\u043e\u0434\u043e\u043a",
+    "longitude": 47.795854210853584,
+    "latitude": 52.024214189520215,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0411\u043e\u043b\u044c\u043d\u0438\u0447\u043d\u044b\u0439 \u0433\u043e\u0440\u043e\u0434\u043e\u043a(\u043a\u043e\u0440\u043f\u0443\u0441 \u0445\u0438\u0440\u0443\u0440\u0433\u0438\u0438)",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 30,
+  "fields": {
+    "name": "\u0428\u043a\u043e\u043b\u0430",
+    "longitude": 47.790302038192756,
+    "latitude": 52.0196125278696,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0428\u043a\u043e\u043b\u0430 \u211612",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 31,
+  "fields": {
+    "name": "\u041a\u043e\u0441\u043c\u043e\u04411",
+    "longitude": 47.783617973327644,
+    "latitude": 52.01966864854607,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043a\u043e\u0441\u043c\u043e\u04411",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 32,
+  "fields": {
+    "name": "\u041a\u043e\u0441\u043c\u043e\u04412",
+    "longitude": 47.78290987014771,
+    "latitude": 52.02083066084893,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041a\u043e\u0441\u043c\u043e\u04412",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 33,
+  "fields": {
+    "name": "\u0422\u0438\u0442\u043e\u0432\u0430",
+    "longitude": 47.78599977493286,
+    "latitude": 52.019289007302916,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0422\u0438\u0442\u043e\u0432\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 34,
+  "fields": {
+    "name": "\u041e\u0434\u0435\u0436\u0434\u0430",
+    "longitude": 47.78294742107392,
+    "latitude": 52.02388740133236,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u0432\u043e\u043a\u0430 \u043e\u0434\u0435\u0436\u0434\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 35,
+  "fields": {
+    "name": "\u041c\u0438\u043b\u0435\u043d\u0430",
+    "longitude": 47.78286695480347,
+    "latitude": 52.02696373697986,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u041c\u0438\u043b\u0435\u043d\u0430",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.routeplatform",
+  "pk": 36,
+  "fields": {
+    "name": "\u0414\u0435\u0442\u0441\u043a\u0438\u0439 \u043c\u0438\u0440",
+    "longitude": 47.782888412475586,
+    "latitude": 52.03066694188891,
+    "description": "\u041e\u0441\u0442\u0430\u043d\u0432\u043e\u043a\u0430 \u0414\u0435\u0442\u0441\u043a\u0438\u0439 \u043c\u0438\u0440",
+    "order_number": 1
+  }
+},
+{
+  "model": "route.platformtype",
+  "pk": 1,
+  "fields": {
+    "name": "\u0413\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430",
+    "description": "\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0434\u043b\u044f \u0432\u043d\u0443\u0442\u0440\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u043e\u0433\u043e \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u0430"
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 1,
+  "fields": {
+    "uuid": "868183037476160",
+    "name": "\u041d\u0435\u0444\u0430\u0437",
+    "licenseplate": "\u041c 174 \u041c\u041c 164",
+    "type": "bus",
+    "model": "\u041d\u0415\u0424\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 2,
+  "fields": {
+    "uuid": "204150",
+    "name": "\u0411\u042d\u0422 \u041f\u0410\u0417 914",
+    "licenseplate": "\u0412\u0415 914",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 3,
+  "fields": {
+    "uuid": "1345810",
+    "name": "\u0411\u042d\u0422 \u041f\u0410\u0417 964",
+    "licenseplate": "\u0410 964 \u041a\u041d",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 4,
+  "fields": {
+    "uuid": "1345807",
+    "name": "\u0411\u042d\u0422 \u041f\u0410\u0417 967",
+    "licenseplate": "\u0410 967 \u041a\u041d",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 5,
+  "fields": {
+    "uuid": "1345813",
+    "name": "\u0411\u042d\u0422 \u041f\u0410\u0417 972",
+    "licenseplate": "\u0410 972 \u041a\u041d",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 6,
+  "fields": {
+    "uuid": "204148",
+    "name": "\u0411\u042d\u0422 \u0424\u041e\u0420\u0414",
+    "licenseplate": "297",
+    "type": "bus",
+    "model": "\u0424\u041e\u0420\u0414",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 7,
+  "fields": {
+    "uuid": "868183037431918",
+    "name": "\u0411\u042d\u0422 \u0425 940 \u041c\u041c 64",
+    "licenseplate": "\u0425940\u041c\u041c64",
+    "type": "bus",
+    "model": "\u041b\u0418\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 8,
+  "fields": {
+    "uuid": "868183037449142",
+    "name": "\u0411\u042d\u0422 \u0425941\u041c\u041c64",
+    "licenseplate": "\u0425941\u041c\u041c64",
+    "type": "bus",
+    "model": "\u041b\u0418\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 9,
+  "fields": {
+    "uuid": "868183037441560",
+    "name": "\u0411\u042d\u0422 \u0425942\u041c\u041c64",
+    "licenseplate": "\u0425942\u041c\u041c64",
+    "type": "bus",
+    "model": "\u041b\u0418\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 10,
+  "fields": {
+    "uuid": "868183037463218",
+    "name": "\u0411\u042d\u0422 \u0425943\u041c\u041c64",
+    "licenseplate": "\u0425943\u041c\u041c64",
+    "type": "bus",
+    "model": "\u041b\u0418\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 11,
+  "fields": {
+    "uuid": "866795031904392",
+    "name": "\u0411\u042d\u0422_ \u0425347\u0420\u041264",
+    "licenseplate": "\u0425347\u0420\u041264",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 12,
+  "fields": {
+    "uuid": "866795031886250",
+    "name": "\u0411\u042d\u0422_\u0410405\u0410\u0422164",
+    "licenseplate": "\u0410405\u0410\u0422164",
+    "type": "bus",
+    "model": "",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 13,
+  "fields": {
+    "uuid": "866795031902818",
+    "name": "\u0411\u042d\u0422_\u0410970\u041a\u041d164",
+    "licenseplate": "\u0410970\u041a\u041d164",
+    "type": "bus",
+    "model": "",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 14,
+  "fields": {
+    "uuid": "352094082200434",
+    "name": "\u0411\u042d\u0422_\u0412\u041591064",
+    "licenseplate": "\u0412\u041591064",
+    "type": "bus",
+    "model": "",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 15,
+  "fields": {
+    "uuid": "866795031906553",
+    "name": "\u0411\u042d\u0422_\u0412\u041591164",
+    "licenseplate": "\u0412\u041591164",
+    "type": "bus",
+    "model": "",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 16,
+  "fields": {
+    "uuid": "866795031871518",
+    "name": "\u0411\u042d\u0422_\u0412\u041591364",
+    "licenseplate": "\u0412\u041591364",
+    "type": "bus",
+    "model": "",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 17,
+  "fields": {
+    "uuid": "866795032220731",
+    "name": "\u0411\u042d\u0422_\u041c\u0410\u0420\u0417 \u0410\u0410957",
+    "licenseplate": "\u0410\u0410957",
+    "type": "bus",
+    "model": "\u041c\u0410\u0420\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 18,
+  "fields": {
+    "uuid": "863586036040644",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430415\u0441\u0442",
+    "licenseplate": "\u0430415\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 19,
+  "fields": {
+    "uuid": "863586038531798",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430416\u0441\u0442",
+    "licenseplate": "\u0430416\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 20,
+  "fields": {
+    "uuid": "863586038518381",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430437\u0441\u0442",
+    "licenseplate": "\u0430437\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 21,
+  "fields": {
+    "uuid": "863586036042624",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430438\u0441\u0442",
+    "licenseplate": "\u0430438\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 4
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 22,
+  "fields": {
+    "uuid": "863586035944135",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430439\u0441\u0442",
+    "licenseplate": "\u0430439\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 23,
+  "fields": {
+    "uuid": "863586038530949",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0410440\u0421\u0422",
+    "licenseplate": "\u0410440\u0421\u0422",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 24,
+  "fields": {
+    "uuid": "863586038518555",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430441\u0441\u0442",
+    "licenseplate": "\u0430441\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+},
+{
+  "model": "route.busmodel",
+  "pk": 25,
+  "fields": {
+    "uuid": "863586038516237",
+    "name": "\u0411\u042d\u0422_\u041f\u0410\u0417 \u0430442\u0441\u0442",
+    "licenseplate": "\u0430442\u0441\u0442",
+    "type": "bus",
+    "model": "\u041f\u0410\u0417",
+    "techquality": 3
+  }
+}
+]

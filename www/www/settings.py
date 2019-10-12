@@ -22,20 +22,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wp82&o$dlc8j%5uwso6*y**-ze5ozyv!n+@^8ssayqqj3e6#s7'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.getenv('DEBUG_VALUE') == "FALSE":
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = bool(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = [
     '_',
     'localhost',
     '127.0.0.1',
+    'vas-admin.submin.ru',
     'vas.submin.ru',
     'submin.ru',
     'vas',
 ]
+
 
 # Application definition
 
@@ -95,24 +95,16 @@ WSGI_APPLICATION = 'www.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if os.getenv('DATABASE_BACKENDS_MYSQL') == "TRUE":
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.getenv('DB_NAME') or 'DB_NAME',
-            'USER': os.getenv('DB_USER') or 'DB_USER',
-            'PASSWORD': os.getenv('DB_PASSWORD') or 'DB_PASSWORD',
-            'HOST': os.getenv('DB_HOST') or 'localhost',  # Or an IP Address that your DB is hosted on
-            # 'PORT': '3306',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME') or 'DB_NAME',
+        'USER': os.getenv('DB_USER') or 'DB_USER',
+        'PASSWORD': os.getenv('DB_PASSWORD') or 'DB_PASSWORD',
+        'HOST': os.getenv('DB_HOST') or 'localhost',  # Or an IP Address that your DB is hosted on
+        'PORT': os.getenv('DB_PORT') or '5432',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
 
 
 # Password validation
@@ -141,7 +133,7 @@ LANGUAGE_CODE = 'ru-RU'
 
 SELECT2_DATA_LOCALE = 'ru-RU'
 
-TIME_ZONE = 'Europe/Saratov'
+TIME_ZONE = os.getenv('TIME_ZONE') or 'Europe/Moscow'
 
 USE_I18N = True
 
