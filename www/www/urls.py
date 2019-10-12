@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     path('auth/', include('auth_user.urls')),
     path('auth/', include('django.contrib.auth.urls')),
     path('cabinet/', include('purple_admin.urls')),
+    path('index/', RedirectView.as_view(url='frontoffice:index', permanent=True), name='index'),
+    path('', include('frontoffice.urls', namespace='frontoffice')),
 ]

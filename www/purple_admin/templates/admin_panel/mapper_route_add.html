@@ -13,7 +13,8 @@
                     <div class="input-group input-group-sm">
                         <select name="route" id="route_1" class="custom-select">
                             {% for r in routes %}
-                                <option {% if forloop.first %}selected{% endif %} value="{{ r.id }}">{{ r.name }}</option>
+                                <option {% if forloop.first %}selected{% endif %}
+                                        value="{{ r.id }}">{{ r.name }}</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -35,15 +36,75 @@
                     </div>
                 </div>
             {% endfor %}
-            <div class="row spacer">
-                <div class="col-4 offset-2">
-                    <button type="submit" class="btn btn-block btn-primary">Сохранить</button>
-                </div>
+            <div class="row m-0">
+                <button type="submit" class="btn btn-block btn-primary">Сохранить</button>
             </div>
         </form>
     </div>
+    <div class="container-fluid" id="map_container">
+        <div id="map" class="w-100 h-100" style="min-height: 500px"></div>
+        <button class="btn btn-block btn-primary w-100 my-2" id="map_save">Сохранить</button>
+    </div>
 {% endblock %}
 {% block scripts %}
+    <script src="{% static 'js/L.Routing.js' %}"></script>
+    <script src="{% static 'js/L.Routing.Storage.js' %}"></script>
+    <script src="{% static 'js/L.Routing.Draw.js' %}"></script>
+    <script src="{% static 'js/L.Routing.Edit.js' %}"></script>
+    <script>
+        $(function () {
+            $('#map_container').hide();
+            var polyline;
+            var $form;
+            $('form').submit(function (e) {
+                $form = $(this);
+                $.ajax({
+                    type: $form.attr('method'),
+                    url: $form.attr('action'),
+                    data: $form.serialize()
+                }).done(function (data) {
+                    console.log(data);
+                    $form.hide();
+                    $('#map_container').show();
+                    var coordinates = [];
+                    var contexts = [];
+                    JSON.parse(data).forEach(function (item) {
+                        coordinates.push([item.fields.latitude, item.fields.longitude]);
+                        contexts.push({'point_fields': item.fields, 'id': item.pk})
+                    });
+                    polyline = L.Polyline.PolylineEditor(coordinates, {maxMarkers: 100}, contexts).addTo(map);
+                }).fail(function () {
+                    alert('Ошибка созранения даных')
+                });
+                //отмена действия по умолчанию для кнопки submit
+                e.preventDefault();
+            });
+            $('#map_save').click(function (e) {
+                var points = polyline.getPoints();
+                console.log(points);
+                var points_obj = [];
+                for (var i = 0; i < points.length; i++) {
+                    var point = points[i];
+                    var p = {};
+                    console.log(point.getLatLng());
+                    p.latitude = point.getLatLng().lat;
+                    p.longitude = point.getLatLng().lng;
+                    p.context = point.context;
+                    points_obj.push(p);
+                    {#if (point.context) {#}
+                    {# }#}
+                }
+                console.log(points_obj);
+                $.ajax({
+                    type: $form.attr('method'),
+                    url: '{% url 'admin_panel_mapped_path_save' %}',
+                    data: JSON.stringify(points_obj)
+                 }).done(function (data) {
+                    console.log(data);
+                 })
+            })
+        })
+    </script>
     <script type="text/javascript">
         function updateElementIndex(el, prefix, ndx) {
             var id_regex = new RegExp('(' + prefix + '-\\d+)');
@@ -108,5 +169,39 @@
             return false;
         });
 
+    </script>
+    <script>
+        var map = L.map('map', {
+            layers: [
+                L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    'attribution': 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+                })
+            ],
+            center: [52.022331, 47.782818],
+            zoom: 13
+        });
+        {#var router = L.routing.osrmv1()#}
+        {#var routing = new L.Routing({#}
+        {#    position: 'topright'#}
+        {#    , routing: {#}
+        {#        router: router#}
+        {#    }#}
+        {#    , tooltips: {#}
+        {#        waypoint: 'Waypoint. Drag to move; Click to remove.',#}
+        {#        segment: 'Drag to create a new waypoint'#}
+        {#    }#}
+        {#    , styles: {     // see http://leafletjs.com/reference.html#polyline-options#}
+        {#        trailer: {}  // drawing line#}
+        {#        , track: {}   // calculated route result#}
+        {#        , nodata: {}  // line when no result (error)#}
+        {#    }#}
+        {#    , shortcut: {#}
+        {#        draw: {#}
+        {#            enable: 68    // 'd'#}
+        {#            , disable: 81  // 'q'#}
+        {#        }#}
+        {#    }#}
+        {# });#}
+        {#map.addControl(routing);#}
     </script>
 {% endblock %}

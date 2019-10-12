@@ -1,10 +1,12 @@
+import json
+
 from django.contrib.auth.decorators import login_required
+from django.core import serializers
 from django.forms.models import model_to_dict
 from django.http import JsonResponse
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, Http404
 
-from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm, RoutePlatformFormset, \
-    RouteSelectForm
+from purple_admin.forms import RouteForm, RoutePlatformForm, PlatformTypeForm, BusModelForm, RoutePlatformFormset
 from route.models import PlatformType, Route, RoutePlatform, BusModel, RoutePoint
 
 
@@ -202,8 +204,8 @@ def mapped_route_add(request):
         route_id = request.POST.get('route')
         route = get_object_or_404(Route, pk=route_id)
         formset = RoutePlatformFormset(request.POST)
-        platform = PlatformType.objects.get(pk=1)
-        platform_endpoint = PlatformType.objects.get(pk=3)
+        platform = PlatformType.objects.get(pk=1)  # default platform name
+        platform_endpoint = PlatformType.objects.get(pk=3)  # default platform endpoint name
         last_route_point = None
         if formset.is_valid():
             # route = route_form.save()
@@ -212,9 +214,6 @@ def mapped_route_add(request):
                 route_point.latitude = route_point.route_platform.latitude
                 route_point.longitude = route_point.route_platform.longitude
                 route_point.route = route
-                if last_route_point:
-                    last_route_point.next = route_point
-                route_point.prev = last_route_point
                 # first iteration
                 if num == 1:
                     route_point.route_platform_type = platform_endpoint
@@ -222,9 +221,43 @@ def mapped_route_add(request):
                 if num == len(formset):
                     route_point.route_platform_type = platform_endpoint
                 route_point.save()
+                if last_route_point:
+                    last_route_point.next = route_point
+                    route_point.prev = last_route_point
+                    last_route_point.save()
+                    route_point.save()
                 last_route_point = route_point
+            if request.is_ajax():
+                response = serializers.serialize("json", route.points.all())
+                return JsonResponse(response, safe=False)
             return redirect('admin_panel_cabinet')
     return render(request, template_name, {
         'routes': routes,
         'formset': formset,
     })
+
+
+def mapped_route_path_save(request):
+    if request.method == 'POST' and request.is_ajax():
+        points = json.loads(request.body)
+        middle_point_state = False
+        current_point = None
+        last_point = None
+        for p in points:
+            if p.get('context') and not middle_point_state:
+                middle_point_state = True
+                current_point = get_object_or_404(RoutePoint, pk=p['context'].get('id'))
+            elif p.get('context'):
+                middle_point_state = False
+                current_point = get_object_or_404(RoutePoint, pk=p['context'].get('id'))
+            elif current_point:
+                current_point = RoutePoint(route=current_point.route, latitude=p.get('latitude'), longitude=p.get('longitude'))
+                current_point.save()
+            if last_point:
+                last_point.next = current_point
+                current_point.prev = last_point
+                last_point.save()
+                current_point.save()
+            last_point = current_point
+        return JsonResponse({'status': 'success'})
+    return Http404

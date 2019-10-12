@@ -55,7 +55,7 @@ RoutePlatformFormset = modelformset_factory(
         'route_platform': forms.Select(attrs={
             'class': 'custom-select',
             'ini': 1,
-            'placeholder': 'Enter Author Name here'
+            'placeholder': 'Выберите остановку'
         })
     }
 )

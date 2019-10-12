@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'editor',
     'purple_admin',
     'auth_user',
+    'frontoffice',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

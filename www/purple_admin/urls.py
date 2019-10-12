@@ -25,4 +25,5 @@ urlpatterns = [
     path('ts_delete/<int:pk>/', views.cabinet_delete, {'type': 'ts'}, name='admin_panel_ts_delete'),
     # Адмника Создания маршрута на карте
     path('map_route_editor_add', views.mapped_route_add, name='admin_panel_mapped_route_add'),
+    path('map_route_path_save', views.mapped_route_path_save, name='admin_panel_mapped_path_save'),
 ]

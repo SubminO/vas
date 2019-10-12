@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Система анализа общественного транспорта</title>
+    {% comment %}
+    link js libs
+    {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+
+    <script src="{% static 'js/polyfill.min.js' %}"></script>
+    <script src='{% static 'js/vue.js' %}'></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <link rel="stylesheet" href="//unpkg.com/leaflet/dist/leaflet.css">
+    <script src="//unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="//unpkg.com/vue2-leaflet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-socket.io@3.0.7/dist/vue-socketio.min.js"></script>
+    {#    <script src="https://unpkg.com/vue2-leaflet-movingmarker@0.0.1/dist/Vue2LeafletMovingmarker.js"></script>#}
+</head>
+<body>
+<div id="app" style="height: 100vh;">
+    <div v-if="debug">
+        <button @click="disconnect" v-if="status === 'connected'">Disconnect</button>
+        <button @click="connect" v-if="status === 'disconnected'">Connect</button>
+        [[ status ]]
+        <br/><br/>
+        <div v-if="status === 'connected'">
+            <form @submit.prevent="sendMessage" action="#">
+                <input v-model="message">
+                <button type="submit">Send Message</button>
+            </form>
+            <ul id="logs">
+                <li v-for="log in logs" class="log">
+                    [[ log.event ]]: [[ log.data ]]
+                </li>
+            </ul>
+        </div>
+    </div>
+    <l-map :zoom="zoom" :center="center">
+        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+        <l-marker v-for="(vehicle, uid) in vehicles"
+                  :key="uid"
+                  :lat-lng="[vehicle.posinfo.latitude, vehicle.posinfo.longitude]"></l-marker>
+    </l-map>
+</div>
+</body>
+<script>
+    Vue.component('l-map', window.Vue2Leaflet.LMap);
+    Vue.component('l-tile-layer', window.Vue2Leaflet.LTileLayer);
+    Vue.component('l-marker', window.Vue2Leaflet.LMarker);
+    {#Vue.component('l-moving-marker', window.Vue2Leaflet.LMovingMarker);#}
+    {#Vue.use(VueSocketio, 'http://socketserver.com:1923');#}
+    var app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data() {
+            return {
+                debug: false,
+                message: "",
+                logs: [],
+                vehicles: {},
+                last_data: null,
+                status: "disconnected",
+                zoom: 13,
+                center: L.latLng(52.018320, 47.799789),
+                url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+                markers: [
+                    L.latLng(52.018320, 47.795789),
+                    L.latLng(52.018320, 47.799769),
+                    L.latLng(52.018320, 47.790739),
+                ],
+            }
+        },
+        methods: {
+            groupBy(xs, key) {
+                return xs.reduce(function (rv, x) {
+                    (rv[x[key]] = rv[x[key]] || []).push(x);
+                    return rv;
+                }, {});
+            },
+            connect() {
+                this.socket = new WebSocket("wss://ws.submin.ru/trans/");
+                this.socket.onopen = () => {
+                    this.status = "connected";
+                    this.logs.push({event: "Connected to", data: 'wss://ws.submin.ru/trans/'});
+
+
+                    this.socket.onmessage = ({data}) => {
+                        this.logs = [{event: "Recieved message", data}];
+                        JSON.parse(data).forEach(function (vehicle) {
+                            app.vehicles[vehicle.uid] = vehicle;
+                            {#app.vehicles.push(vehicle)#}
+                        });
+                        this.last_data = data;
+                    };
+                };
+            },
+            disconnect() {
+                this.socket.close();
+                this.status = "disconnected";
+                this.logs = [];
+            },
+            sendMessage(e) {
+                this.socket.send(this.message);
+                this.logs.push({event: "Sent message", data: this.message});
+                this.message = "";
+            }
+        },
+        created() {
+            this.connect();
+        }
+    })
+</script>
+</html>
