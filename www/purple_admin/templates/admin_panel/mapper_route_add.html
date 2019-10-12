@@ -63,7 +63,6 @@
                     url: $form.attr('action'),
                     data: $form.serialize()
                 }).done(function (data) {
-                    console.log(data);
                     $form.hide();
                     $('#map_container').show();
                     var coordinates = [];
@@ -81,12 +80,10 @@
             });
             $('#map_save').click(function (e) {
                 var points = polyline.getPoints();
-                console.log(points);
                 var points_obj = [];
                 for (var i = 0; i < points.length; i++) {
                     var point = points[i];
                     var p = {};
-                    console.log(point.getLatLng());
                     p.latitude = point.getLatLng().lat;
                     p.longitude = point.getLatLng().lng;
                     p.context = point.context;
@@ -94,14 +91,15 @@
                     {#if (point.context) {#}
                     {# }#}
                 }
-                console.log(points_obj);
                 $.ajax({
                     type: $form.attr('method'),
                     url: '{% url 'admin_panel_mapped_path_save' %}',
                     data: JSON.stringify(points_obj)
                  }).done(function (data) {
-                    console.log(data);
-                 })
+                    window.location.replace("{% url 'admin_panel_mapped_route_add' %}");
+                 }).fail(function () {
+                    alert('Ошибка созранения даных')
+                });
             })
         })
     </script>
